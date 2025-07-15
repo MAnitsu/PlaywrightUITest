@@ -8,38 +8,6 @@ It’s designed as a learning and portfolio project for UI test automation.
 
 ## 📂 Project Structure
 
-/PlaywrightUITest
-
-│
-
-├── tests/
-
-│ ├── test_login.py
-
-│ ├── test_checkboxes.py
-
-│ ├── test_dropdown.py
-
-│ ├── test_dynamic_loading.py
-
-│ ├── test_file_upload.py
-
-│
-
-├── venv/ 
-
-│
-
-├── conftest.py
-
-│
-
-├── requirements.txt
-
-│
-
-└── README.md
-
 - `venv/` → Environment directory
 - `tests/` → Contains all test files
 - `conftest.py` → Defines pytest fixtures for browser and page setup
