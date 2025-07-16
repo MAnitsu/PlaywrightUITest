@@ -37,6 +37,7 @@ cd PlaywrightUITest
 python -m venv venv
 venv\Scripts\activate # activates environment
 
+# macOS/Linux:
 # might need to use the following commands first:
 sudo apt install python3.12-pip
 sudo apt install python3.12-pytest
