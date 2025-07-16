@@ -38,7 +38,12 @@ python -m venv venv
 venv\Scripts\activate # activates environment
 
 # macOS/Linux:
-(might need to use `sudo apt install python3.12-venv` first if this is the first installation of venv on the system)
+# might need to use the following commands first:
+sudo apt install python3.12-pip
+sudo apt install python3.12-pytest
+sudo apt install python3.12-venv
+pip install playwright
+# if you have all of the above already installed, use only:
 python3 -m venv venv
 source venv/bin/activate # activates environment
 ```
