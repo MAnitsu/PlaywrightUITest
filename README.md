@@ -38,6 +38,7 @@ python -m venv venv
 venv\Scripts\activate # activates environment
 
 # macOS/Linux:
+(might need to use `sudo apt install python3.12-venv` first if this is the first installation of venv on the system)
 python3 -m venv venv
 source venv/bin/activate # activates environment
 ```
