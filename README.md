@@ -137,6 +137,6 @@ deactivate
 ```
 
 ## 👨‍💻 Author
-Manitsu
+MAnitsu
 
 GitHub Profile: https://github.com/MAnitsu
