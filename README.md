@@ -108,13 +108,16 @@ echo "Hello World" > testfile.txt
 ```
 
 ## 🚀 Ways to Expand This Project
-✅ Add tests for more pages on the-internet.herokuapp.com
 
+### Done
 ✅ Implement the Page Object Model (POM)
 
+✅ Generate HTML test reports (e.g. pytest-html)
+
+### To do
 ✅ Use pytest parametrize to test multiple inputs
 
-✅ Generate HTML test reports (e.g. pytest-html)
+✅ Add tests for more pages on the-internet.herokuapp.com
 
 ✅ Integrate with GitHub Actions for Continuous Integration
 
