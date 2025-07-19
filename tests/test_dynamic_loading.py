@@ -1,7 +1,17 @@
 # tests/test_dynamic_loading.py
 
+from pages.dynamic_loading_page import DynamicLoadingPage
+
+
 def test_dynamic_loading(page):
-    page.goto("https://the-internet.herokuapp.com/dynamic_loading/2")
-    page.click("#start button")
-    page.wait_for_selector("#finish", timeout=6000)
-    assert page.locator("#finish").inner_text() == "Hello World!"
+    dynamic_loading_page = DynamicLoadingPage(page)
+    dynamic_loading_page.navigate()
+
+    # Click the start button
+    dynamic_loading_page.click_start()
+
+    # Wait 6 seconds for selector
+    dynamic_loading_page.wait_loading(6000)
+
+    # Ensure final message is correct
+    assert dynamic_loading_page.check_message("Hello World!") is True
