@@ -7,12 +7,19 @@ This project automates UI tests for [the-internet.herokuapp.com](https://the-int
 ## 📂 Project Structure
 PlaywrightUITest/
 ├── pages/
+
 │ └── your_page.py
+
 ├── tests/
+
 │ └── test_yourpage.py
+
 ├── conftest.py
+
 ├── requirements.txt
+
 ├── .gitignore
+
 └── README.md
 
 - `tests/` → Contains all test files
