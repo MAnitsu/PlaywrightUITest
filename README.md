@@ -5,18 +5,28 @@ This project automates UI tests for [the-internet.herokuapp.com](https://the-int
 ---
 
 ## 📂 Project Structure
+PlaywrightUITest/
+├── pages/
+│ └── your_page.py
+├── tests/
+│ └── test_yourpage.py
+├── conftest.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+
 - `tests/` → Contains all test files
 - `conftest.py` → Defines pytest fixtures for browser and page setup
 - `requirements.txt` → Python dependencies
 - `README.md` → Documentation
-- `.gitignore` → Excludes unnecessary or system-specific files from version control—such
+- `.gitignore` → Excludes unnecessary or system-specific files from version control
 
 ---
 
 ## ✅ Prerequisites
 - Python ≥ 3.9
 - Git
-
+- Playwright CLI (`pip install playwright`)
 ---
 
 ## ⚙️ Installation
@@ -84,10 +94,10 @@ class YourPage:
     def action(self): # define any action you need to be performed on locators, in this example checking a checkbox
         action = self.yourlocator.check()
 
-    def check(self) -> bool # define a check function that returns a boolean value to be able to check if an action was performed or not
+    def check(self) -> bool: # define a check function that returns a boolean value to be able to check if an action was performed or not
         return self.yourlocator.is_checked()
 ```
-### 2. Create a new file in tests/ where the tests will be writen using the methods from the pages, making them easy to read, like scripts:
+### 2. Create a new file in tests/ where the tests will be written using the methods from the pages, making them easy to read, like scripts:
 ```bash
 def test_yourpage(page):
     yourpage_page = YourPage(page)
