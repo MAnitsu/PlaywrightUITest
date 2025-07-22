@@ -7,24 +7,21 @@ It’s designed as a learning and portfolio project for UI test automation.
 ---
 
 ## 📂 Project Structure
-
-- `venv/` → Environment directory
 - `tests/` → Contains all test files
 - `conftest.py` → Defines pytest fixtures for browser and page setup
 - `requirements.txt` → Python dependencies
 - `README.md` → Documentation
+- `.gitignore` → Excludes unnecessary or system-specific files from version control—such
 
 ---
 
 ## ✅ Prerequisites
-
 - Python ≥ 3.9
 - Git
 
 ---
 
 ## ⚙️ Installation
-
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/MAnitsu/PlaywrightUITest.git
@@ -76,7 +73,6 @@ pytest -v
 ```
 
 ## 📄 How to Create New Tests
-
 ### 1. Create a new file in tests/:
 ```bash
 tests/test_new_feature.py
@@ -97,7 +93,6 @@ def test_something(page):
 - page.locator(selector).inner_text()
 
 ## 🔎 Playwright Locator Tips
-
 Examples:
 ```python
 page.locator("#username")
