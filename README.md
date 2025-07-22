@@ -26,9 +26,8 @@ PlaywrightUITest/
 - `tests/` → Contains all test files
 - `conftest.py` → Defines pytest fixtures for browser and page setup
 - `requirements.txt` → Python dependencies
-- `README.md` → Documentation
 - `.gitignore` → Excludes unnecessary or system-specific files from version control
-
+- `README.md` → Documentation
 ---
 
 ## ✅ Prerequisites
