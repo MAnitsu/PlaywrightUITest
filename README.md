@@ -23,6 +23,7 @@ PlaywrightUITest/
 
 └── README.md
 
+- `pages/` → Contains all test pages and their fixtures
 - `tests/` → Contains all test files
 - `conftest.py` → Defines pytest fixtures for browser and page setup
 - `requirements.txt` → Python dependencies
@@ -88,7 +89,7 @@ pytest -v
 ```
 
 ## 📄 How to Create New Tests
-### 1. Create a new file in pages/ to import the page fixture:
+### 1. Create a new file in pages/ to import the page fixtures:
 ```python
 class YourPage:
     def __init__(self, page: Page): # in the constructor all the locators needed must be assigned
