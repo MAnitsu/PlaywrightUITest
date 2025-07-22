@@ -32,20 +32,16 @@ cd PlaywrightUITest
 ```
 
 ### 2. Create a Virtual Environment
+The virtual environment is not included in the repository. Each user should generate it locally depending on their OS.
+
 ```bash
 # Windows:
 python -m venv venv
 venv\Scripts\activate # activates environment
 
 # macOS/Linux:
-# might need to use the following commands first:
-sudo apt install python3.12-pip
-sudo apt install python3.12-pytest
-sudo apt install python3.12-venv
-pip install playwright
-# if you have all of the above already installed, use only:
 python3 -m venv venv
-source venv/bin/activate # activates environment
+source venv/bin/activate
 ```
 
 ### 3. Install Python Dependencies
@@ -57,10 +53,18 @@ pip install -r requirements.txt
 ```bash
 playwright install
 ```
+### 💡 Notes
+The venv/ folder is excluded via .gitignore to keep the repository clean and OS-independent.
+
+Regenerating the virtual environment ensures consistency across contributors without committing system-specific binaries.
+
 ## 🧪 Running Tests
 Run all tests:
 ```bash
 pytest
+# for easy to read reports, install pytest-html
+pip install pytest-html
+pytest --html=report.html --self-contained-html # to run the tests and generate the report
 ```
 Run a specific test file:
 ```bash
