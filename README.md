@@ -2,8 +2,6 @@
 
 This project automates UI tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) using Python, pytest, and Playwright.  
 
-It’s designed as a learning and portfolio project for UI test automation.
-
 ---
 
 ## 📂 Project Structure
