@@ -71,16 +71,33 @@ pytest -v
 ```
 
 ## 📄 How to Create New Tests
-### 1. Create a new file in tests/:
-```bash
-tests/test_new_feature.py
-```
-### 2. Import the page fixture:
+### 1. Create a new file in pages/ to import the page fixture:
 ```python
-def test_something(page):
-    page.goto("https://the-internet.herokuapp.com/")
-    # Your test actions
-    assert page.title() == "The Internet"
+class YourPage:
+    def __init__(self, page: Page): # in the constructor all the locators needed must be assigned
+        self.page = page
+        self.yourlocator = page.locator("#yourlocatorhere")
+
+    def navigate(self): # navigate action is mandatory to be able to load the page
+        self.page.goto("https://yourpagehere.test")
+
+    def action(self): # define any action you need to be performed on locators, in this example checking a checkbox
+        action = self.yourlocator.check()
+
+    def check(self) -> bool # define a check function that returns a boolean value to be able to check if an action was performed or not
+        return self.yourlocator.is_checked()
+```
+### 2. Create a new file in tests/ where the tests will be writen using the methods from the pages, making them easy to read, like scripts:
+```bash
+def test_yourpage(page):
+    yourpage_page = YourPage(page)
+    yourpage_page.navigate() # loads the page
+    
+    # perform action
+    yourpage_page.action()
+
+    # check that your action was performed
+    assert yourpage_page.check() is True # if the action was performed, the test will pass, else the test will fail
 ```
 
 ### 3. Use Playwright commands:
