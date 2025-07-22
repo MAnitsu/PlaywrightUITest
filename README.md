@@ -6,9 +6,10 @@ This project automates UI tests for [the-internet.herokuapp.com](https://the-int
 
 ## 📂 Project Structure
 PlaywrightUITest/
+
 ├── pages/
 
-│ └── your_page.py
+│ └── yourpage_page.py
 
 ├── tests/
 
