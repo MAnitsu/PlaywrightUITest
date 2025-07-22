@@ -75,9 +75,6 @@ Regenerating the virtual environment ensures consistency across contributors wit
 Run all tests:
 ```bash
 pytest
-# for easy to read reports, install pytest-html
-pip install pytest-html
-pytest --html=report.html --self-contained-html # to run the tests and generate the report
 ```
 Run a specific test file:
 ```bash
@@ -86,6 +83,11 @@ pytest tests/test_login.py
 Run tests with detailed output:
 ```bash
 pytest -v
+```
+Run tests and generate an easy to read report
+```bash
+pip install pytest-html
+pytest --html=report.html --self-contained-html # to run the tests and generate the report
 ```
 
 ## 📄 How to Create New Tests
