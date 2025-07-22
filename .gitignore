@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Playwright downloads (browsers)
+.playwright/
+
+# Test results / logs
+*.log
+html-report/
+test-results/
+
+# VS Code settings (optional)
+.vscode/
